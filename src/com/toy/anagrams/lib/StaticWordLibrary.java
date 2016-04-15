@@ -47,7 +47,7 @@ final class StaticWordLibrary extends WordLibrary {
         "consequently",
         "consortium",
         "decrementing",
-        "dependency",
+        "independency",//change
         "disambiguate",
         "dynamic",
         "encapsulation",
@@ -61,6 +61,7 @@ final class StaticWordLibrary extends WordLibrary {
         "inheritance",
         "internet",
         "java",
+        "javascript",//add
         "localization",
         "microprocessor",
         "navigation",
@@ -68,6 +69,7 @@ final class StaticWordLibrary extends WordLibrary {
         "parameter",
         "patrick",
         "pickle",
+        "pink",//add
         "polymorphic",
         "rigorously",
         "simultaneously",
@@ -94,7 +96,7 @@ final class StaticWordLibrary extends WordLibrary {
         "ocsnqeeutnyl",
         "ocsnroitmu",
         "edrcmeneitgn",
-        "edepdnneyc",
+        "edeipdnnneyc",//change
         "idasbmgiauet",
         "ydanicm",
         "neacsplutaoni",
@@ -108,6 +110,7 @@ final class StaticWordLibrary extends WordLibrary {
         "niehiratcen",
         "nietnret",
         "ajav",
+        "ajsirvtcap",//add
         "olacilazitno",
         "imrcpoorecssro",
         "anivagitno",
@@ -115,6 +118,7 @@ final class StaticWordLibrary extends WordLibrary {
         "aparemert",
         "aprtcki",
         "ipkcel",
+        "ikpn",//add
         "opylomprich",
         "irogorsuyl",
         "isumtlnaoesuyl",
