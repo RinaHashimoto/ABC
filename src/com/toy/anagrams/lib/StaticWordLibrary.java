@@ -32,10 +32,13 @@
 package com.toy.anagrams.lib;
 import java.util.Random;
 
+import com.toy.anagrams.ui.Anagrams;
+
 /**
  * Implementation of the logic for the Anagram Game application.
  */
-final class StaticWordLibrary extends WordLibrary {
+public final class StaticWordLibrary extends WordLibrary {
+	//public Anagrams Ag = new Anagrams() ;
 
     private static final String[] WORD_LIST = {
         "abstraction",
@@ -137,9 +140,9 @@ final class StaticWordLibrary extends WordLibrary {
     };
 
     
-    public String[] shuffle(String[] WORD_LIST){
+    public String[] shuffle(){
     	int m = WORD_LIST.length;
-    	String word[] = new String[m];
+    	
     	for(int i=0; i<m; i++){
     		String chars = WORD_LIST[i];
     		//
@@ -160,9 +163,9 @@ final class StaticWordLibrary extends WordLibrary {
     			}
     				
     		}
-    		word[i] = buf.toString();
+    		WORD_LIST[i] = buf.toString();
     	}
-    		return word;
+    		return WORD_LIST;
     }
     
     final static WordLibrary DEFAULT = new StaticWordLibrary();
@@ -188,7 +191,9 @@ final class StaticWordLibrary extends WordLibrary {
      * @return word at that index in its scrambled form
      */
     public String getScrambledWord(int idx) {
-        return SCRAMBLED_WORD_LIST[idx];
+    
+    	//for(int y = 0;y < Ag.getA();y++) shuffle();
+        return WORD_LIST[idx];
     }
 
     /**

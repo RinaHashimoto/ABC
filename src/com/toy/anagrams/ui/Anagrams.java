@@ -32,6 +32,9 @@
 package com.toy.anagrams.ui;
 
 import com.toy.anagrams.lib.WordLibrary;
+
+import com.toy.anagrams.lib.StaticWordLibrary;
+
 import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Toolkit;
@@ -75,15 +78,21 @@ public class Anagrams extends JFrame {
         });
     }
 
+    public int a = 1; 
+    
     private int wordIdx = 0;
     private WordLibrary wordLibrary;
+    
+    private StaticWordLibrary SW;
+    
 
     /** Creates new form Anagrams */
     public Anagrams() {
         wordLibrary = WordLibrary.getDefault();
-        
+        wordLibrary.shuffle();
         initComponents();
         getRootPane().setDefaultButton(guessButton);
+        a = 1;
         scrambledWord.setText(wordLibrary.getScrambledWord(wordIdx));
         pack();
         guessedWord.requestFocusInWindow();
@@ -254,7 +263,26 @@ public class Anagrams extends JFrame {
     }//GEN-LAST:event_aboutMenuItemActionPerformed
 
     private void nextTrialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextTrialActionPerformed
-        wordIdx = (wordIdx + 1) % wordLibrary.getSize();
+        String selectbox = (String)selectLevel.getSelectedItem();
+       
+        
+    	if(selectbox.equals("Level 1") ) {
+    		System.out.println("1");
+    		wordLibrary.shuffle();
+    	}
+    	else if(selectbox.equals("Level 2") ){
+    		System.out.println("2");
+    		wordLibrary.shuffle();
+    		wordLibrary.shuffle();
+    	} else {
+    		System.out.println("3");
+    		wordLibrary.shuffle();
+    		wordLibrary.shuffle();
+    		wordLibrary.shuffle();
+    	}
+        	
+    	
+    	wordIdx = (wordIdx + 1) % wordLibrary.getSize();
 
         feedbackLabel.setText(" ");
         scrambledWord.setText(wordLibrary.getScrambledWord(wordIdx));
@@ -283,6 +311,10 @@ public class Anagrams extends JFrame {
     private void exitForm(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_exitForm
         System.exit(0);
     }//GEN-LAST:event_exitForm
+    
+    public int getA(){
+    	return a;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
